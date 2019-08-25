@@ -4557,7 +4557,7 @@ int platform_get_app_type_v2(void *platform,
               __func__, entry->uc_type, entry->mode, entry->bit_width,
               entry->app_type, entry->max_rate);
         if (entry->bit_width == bw &&
-            entry->uc_type == uc_type &&
+            entry->uc_type == (int) uc_type &&
             sr <= entry->max_rate &&
             entry->mode && !strcmp(mode, entry->mode)) {
             ALOGV("%s found match %d", __func__, entry->app_type);
